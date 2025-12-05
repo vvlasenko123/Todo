@@ -5,4 +5,3 @@ httpx==0.28.1
 sqlalchemy==2.0.44
 aiosqlite==0.21.0
 sqlmodel==0.0.27
-websocket==0.2.1
