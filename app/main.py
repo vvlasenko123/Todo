@@ -34,7 +34,6 @@ class TaskModel(SQLModel, table=True):
     description: str
     done: bool = False
 
-# dependency: асинхронная сессия
 async def get_db():
     async with DBSession() as db:
         try:
@@ -90,7 +89,6 @@ async def log_requests(request: Request, call_next):
     print(f"Request to: {request.url.path} processed in {process_time:.4f} seconds")
     return response
 
-# Параметры a и b сразу типизируем как int
 @app.get("/add")
 def add_numbers(a: int, b: int):
     return { "result": a + b }
